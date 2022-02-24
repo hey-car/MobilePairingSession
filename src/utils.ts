@@ -1,4 +1,7 @@
 import {RootState} from './store/store';
+import {NativeModules} from 'react-native';
+
+const ImageScreen = NativeModules.Image;
 
 export interface FetchDogsFromApi {
   apiURL?: string;
@@ -33,3 +36,7 @@ export const fetchDogsFromApi = async ({
 };
 
 export const getRootStateMock = (): RootState => ({counter: {value: 0}});
+
+export const navigateToImageScreen = () => {
+  ImageScreen.navigate();
+};
