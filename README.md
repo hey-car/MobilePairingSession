@@ -17,6 +17,7 @@ The project was initiated with Create React App, with:
 
 - React
 - React Native
+- Native Modules
 - TypeScript
 - Jest, React Testing Library and Redux Mock Store
 - Redux, with Redux Toolkit

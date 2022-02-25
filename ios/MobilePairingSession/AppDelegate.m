@@ -45,8 +45,13 @@ static void InitializeFlipper(UIApplication *application) {
   self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
   UIViewController *rootViewController = [UIViewController new];
   rootViewController.view = rootView;
-  self.window.rootViewController = rootViewController;
+  
+  UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:rootViewController];
+  self.window.rootViewController = navController;
   [self.window makeKeyAndVisible];
+  [navController setNavigationBarHidden:YES animated:YES];
+  self.navigationController = navController;
+  
   return YES;
 }
 
