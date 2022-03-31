@@ -44,6 +44,12 @@ function HomeScreen({navigation}: {navigation: HomeScreenNavigationProp}) {
             title={'Native Image Screen'}
           />
         </View>
+        <View style={styles.buttons}>
+          <Button
+            onPress={() => navigation.navigate('Recommendation')}
+            title={'Recommendation Screen'}
+          />
+        </View>
       </View>
     </SafeAreaView>
   );
